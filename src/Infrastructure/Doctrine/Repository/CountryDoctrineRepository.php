@@ -9,6 +9,8 @@ use EmpireDesAmis\Country\Domain\Entity\Country;
 use EmpireDesAmis\Country\Domain\Repository\CountryRepositoryInterface;
 use EmpireDesAmis\Country\Domain\ValueObject\CountryId;
 use EmpireDesAmis\Country\Domain\ValueObject\CountryName;
+use EmpireDesAmis\Country\Infrastructure\Doctrine\Entity\Country as CountryDoctrine;
+use EmpireDesAmis\Country\Infrastructure\Doctrine\Mapper\CountryMapper;
 use Symfony\Component\Uid\Uuid;
 use TegCorp\SharedKernelBundle\Infrastructure\Doctrine\ORM\DoctrineRepository;
 
@@ -17,7 +19,7 @@ use TegCorp\SharedKernelBundle\Infrastructure\Doctrine\ORM\DoctrineRepository;
  */
 final class CountryDoctrineRepository extends DoctrineRepository implements CountryRepositoryInterface
 {
-    private const string ENTITY_CLASS = Country::class;
+    private const string ENTITY_CLASS = CountryDoctrine::class;
     private const string ALIAS = 'country';
 
     public function __construct(EntityManagerInterface $entityManager)
@@ -29,7 +31,16 @@ final class CountryDoctrineRepository extends DoctrineRepository implements Coun
     public function ofName(
         CountryName $name,
     ): ?Country {
-        return $this->entityManager->getRepository(self::ENTITY_CLASS)->findOneBy(['name.value' => $name->value()]);
+        $country = $this->entityManager
+            ->getRepository(self::ENTITY_CLASS)
+            ->findOneBy(['name' => $name->value()])
+        ;
+
+        if ($country === null) {
+            return null;
+        }
+
+        return CountryMapper::toDomain($country);
     }
 
     #[\Override]
@@ -43,7 +54,9 @@ final class CountryDoctrineRepository extends DoctrineRepository implements Coun
     #[\Override]
     public function add(Country $country): void
     {
-        $this->entityManager->persist($country);
+        $countryDoctrine = CountryMapper::toInfrastructurePersist($country);
+
+        $this->entityManager->persist($countryDoctrine);
         $this->entityManager->flush();
     }
 }

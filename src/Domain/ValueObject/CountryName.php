@@ -4,13 +4,10 @@ declare(strict_types=1);
 
 namespace EmpireDesAmis\Country\Domain\ValueObject;
 
-use Doctrine\ORM\Mapping as ORM;
 use TegCorp\SharedKernelBundle\Infrastructure\Webmozart\Assert;
 
-#[ORM\Embeddable]
 final readonly class CountryName
 {
-    #[ORM\Column(name: 'name', type: 'string', length: 255, unique: true)]
     private string $value;
 
     public function __construct(

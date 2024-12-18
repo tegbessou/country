@@ -4,22 +4,18 @@ declare(strict_types=1);
 
 namespace EmpireDesAmis\Country\Domain\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use EmpireDesAmis\Country\Domain\Event\CountryCreated;
 use EmpireDesAmis\Country\Domain\ValueObject\CountryId;
 use EmpireDesAmis\Country\Domain\ValueObject\CountryName;
 use TegCorp\SharedKernelBundle\Domain\Entity\EntityDomainEventTrait;
 use TegCorp\SharedKernelBundle\Domain\Entity\EntityWithDomainEventInterface;
 
-#[ORM\Entity]
 final class Country implements EntityWithDomainEventInterface
 {
     use EntityDomainEventTrait;
 
     public function __construct(
-        #[ORM\Embedded(columnPrefix: false)]
         private CountryId $id,
-        #[ORM\Embedded(columnPrefix: false)]
         private CountryName $name,
     ) {
     }
