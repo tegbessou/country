@@ -228,7 +228,7 @@ phpmd:
 ## Linter yaml
 yaml-linter:
 	@echo "\nRunning yaml linter...\e[0m"
-	@$(EXEC_SYMFONY) lint:yaml src/ config/ fixtures/ docker*
+	@$(EXEC_SYMFONY) lint:yaml src/ config/ docker*
 
 ## Linter xliff
 xliff-linter:

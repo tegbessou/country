@@ -95,8 +95,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "EmpireDesAmis\\Country\\Tests\\": "tests/",
-            "EmpireDesAmis\\Country\\DataFixtures\\": "fixtures/"
+            "EmpireDesAmis\\Country\\Tests\\": "tests/"
         }
     },
     "replace": {
