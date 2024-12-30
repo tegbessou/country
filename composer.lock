@@ -1609,16 +1609,16 @@
         },
         {
             "name": "doctrine/mongodb-odm",
-            "version": "2.9.0",
+            "version": "2.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/mongodb-odm.git",
-                "reference": "3c9b1e8668343408cb70c9c9cd724b834d95438a"
+                "reference": "ad7827c7915b8b867cb28f5252d99b08ec67ac78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/mongodb-odm/zipball/3c9b1e8668343408cb70c9c9cd724b834d95438a",
-                "reference": "3c9b1e8668343408cb70c9c9cd724b834d95438a",
+                "url": "https://api.github.com/repos/doctrine/mongodb-odm/zipball/ad7827c7915b8b867cb28f5252d99b08ec67ac78",
+                "reference": "ad7827c7915b8b867cb28f5252d99b08ec67ac78",
                 "shasum": ""
             },
             "require": {
@@ -1703,7 +1703,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/mongodb-odm/issues",
-                "source": "https://github.com/doctrine/mongodb-odm/tree/2.9.0"
+                "source": "https://github.com/doctrine/mongodb-odm/tree/2.9.1"
             },
             "funding": [
                 {
@@ -1719,7 +1719,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-20T12:31:14+00:00"
+            "time": "2024-12-19T09:54:22+00:00"
         },
         {
             "name": "doctrine/mongodb-odm-bundle",
@@ -2201,8 +2201,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "ocramius/proxy-manager",
-                    "url": "https://github.com/Ocramius/ProxyManager"
+                    "url": "https://github.com/Ocramius/ProxyManager",
+                    "name": "ocramius/proxy-manager"
                 }
             },
             "autoload": {
@@ -5189,12 +5189,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -5660,12 +5660,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -6066,12 +6066,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -8625,12 +8625,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -8852,12 +8852,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -9812,16 +9812,16 @@
         },
         {
             "name": "tegbessou/shared-kernel",
-            "version": "1.7.2",
+            "version": "1.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tegbessou/shared-kernel.git",
-                "reference": "8023d473d0625b64df7363c339a78c76e6c75122"
+                "reference": "80500bfc5867454055798e44a640f6aa12bb9c52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tegbessou/shared-kernel/zipball/8023d473d0625b64df7363c339a78c76e6c75122",
-                "reference": "8023d473d0625b64df7363c339a78c76e6c75122",
+                "url": "https://api.github.com/repos/tegbessou/shared-kernel/zipball/80500bfc5867454055798e44a640f6aa12bb9c52",
+                "reference": "80500bfc5867454055798e44a640f6aa12bb9c52",
                 "shasum": ""
             },
             "require": {
@@ -9872,10 +9872,10 @@
             ],
             "description": "Shared Kernel",
             "support": {
-                "source": "https://github.com/tegbessou/shared-kernel/tree/1.7.2",
+                "source": "https://github.com/tegbessou/shared-kernel/tree/1.7.7",
                 "issues": "https://github.com/tegbessou/shared-kernel/issues"
             },
-            "time": "2024-12-10T19:12:44+00:00"
+            "time": "2024-12-26T13:01:52+00:00"
         },
         {
             "name": "twig/extra-bundle",
