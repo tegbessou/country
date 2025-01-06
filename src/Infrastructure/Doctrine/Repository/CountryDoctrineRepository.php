@@ -10,7 +10,6 @@ use EmpireDesAmis\Country\Domain\Repository\CountryRepositoryInterface;
 use EmpireDesAmis\Country\Domain\ValueObject\CountryName;
 use EmpireDesAmis\Country\Infrastructure\Doctrine\Entity\Country as CountryDoctrine;
 use EmpireDesAmis\Country\Infrastructure\Doctrine\Mapper\CountryMapper;
-use Symfony\Component\Uid\Uuid;
 use TegCorp\SharedKernelBundle\Infrastructure\Doctrine\ORM\DoctrineRepository;
 
 /**
