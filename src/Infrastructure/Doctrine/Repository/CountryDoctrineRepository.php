@@ -7,11 +7,9 @@ namespace EmpireDesAmis\Country\Infrastructure\Doctrine\Repository;
 use Doctrine\ORM\EntityManagerInterface;
 use EmpireDesAmis\Country\Domain\Entity\Country;
 use EmpireDesAmis\Country\Domain\Repository\CountryRepositoryInterface;
-use EmpireDesAmis\Country\Domain\ValueObject\CountryId;
 use EmpireDesAmis\Country\Domain\ValueObject\CountryName;
 use EmpireDesAmis\Country\Infrastructure\Doctrine\Entity\Country as CountryDoctrine;
 use EmpireDesAmis\Country\Infrastructure\Doctrine\Mapper\CountryMapper;
-use Symfony\Component\Uid\Uuid;
 use TegCorp\SharedKernelBundle\Infrastructure\Doctrine\ORM\DoctrineRepository;
 
 /**
@@ -41,14 +39,6 @@ final class CountryDoctrineRepository extends DoctrineRepository implements Coun
         }
 
         return CountryMapper::toDomain($country);
-    }
-
-    #[\Override]
-    public function nextIdentity(): CountryId
-    {
-        return CountryId::fromString(
-            Uuid::v4()->toRfc4122()
-        );
     }
 
     #[\Override]
