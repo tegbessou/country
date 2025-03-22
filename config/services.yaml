@@ -7,6 +7,9 @@ services:
         bind:
             $kernelProjectDirectory: '%kernel.project_dir%'
 
+    EmpireDesAmis\Country\:
+        resource: '../src/'
+
     EmpireDesAmis\Country\Application\Projection\CreateCountryProjection:
         tags: [kernel.event_listener]
 
