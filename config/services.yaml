@@ -21,9 +21,6 @@ when@dev:
             bind:
                 $kernelProjectDirectory: '%kernel.project_dir%'
 
-        EmpireDesAmis\Country\:
-            resource: '../src/'
-
         EmpireDesAmis\SecurityAuthenticatorBundle\Firebase\Security\Authenticator\AuthenticateUserFromProviderFirebaseInterface:
             alias: EmpireDesAmis\SecurityAuthenticatorBundle\Firebase\Security\Authenticator\AuthenticateUserFromProviderFakeFirebase
 
@@ -34,9 +31,6 @@ when@test:
             autoconfigure: true
             bind:
                 $kernelProjectDirectory: '%kernel.project_dir%'
-
-        EmpireDesAmis\Country\:
-            resource: '../src/'
 
         EmpireDesAmis\SecurityAuthenticatorBundle\Firebase\Security\Authenticator\AuthenticateUserFromProviderFirebaseInterface:
             alias: EmpireDesAmis\SecurityAuthenticatorBundle\Firebase\Security\Authenticator\AuthenticateUserFromProviderFakeFirebase

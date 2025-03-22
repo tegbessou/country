@@ -7,7 +7,7 @@ namespace EmpireDesAmis\Country\Infrastructure\ApiPlatform\Resource;
 use ApiPlatform\Metadata\Get;
 use EmpireDesAmis\Country\Infrastructure\ApiPlatform\State\Provider\UpProvider;
 
-#[Get('/up', provider: UpProvider::class)]
+#[Get('/up_country', provider: UpProvider::class)]
 final readonly class UpResource
 {
 }

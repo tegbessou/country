@@ -16,7 +16,7 @@
     host: 5.189.149.68
     app_port: 8082
     healthcheck:
-      path: /api/up
+      path: /api/up_country
 
   registry:
     username: tegbessou

@@ -15,7 +15,7 @@ final class UpProviderTest extends ApiTestCase
     {
         $client = static::createClient();
 
-        $client->request('GET', '/api/up');
+        $client->request('GET', '/api/up_country');
 
         $this->assertResponseIsSuccessful();
         $this->assertResponseStatusCodeSame(200);
