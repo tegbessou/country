@@ -55,5 +55,5 @@
     traefik.http.routers.empire-des-amis-country.rule: "PathPrefix(`/country/api`)"
     traefik.http.routers.empire-des-amis-country.entrypoints: "web"
     traefik.http.services.empire-des-amis-country.loadbalancer.server.port: "8082"
-    traefik.http.routers.empire-des-amis-country.middlewares: "strip-prefix"
-    traefik.http.middlewares.strip-prefix.stripPrefix.prefixes: "/country"
+    traefik.http.routers.empire-des-amis-country.middlewares: "strip-prefix-country"
+    traefik.http.middlewares.strip-prefix-country.stripPrefix.prefixes: "/country"
