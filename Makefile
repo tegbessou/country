@@ -9,7 +9,7 @@ COMPOSER = $(EXEC_PHP) composer
 .DEFAULT_GOAL := help
 
 help: ## This help dialog.
-	@echo "${GREEN}Bottle Inventory - Des amis, du vin${RESET}"
+	@echo "${GREEN}Country - Des amis, du vin${RESET}"
 	@awk '/^[a-zA-Z\-\_0-9]+:/ { \
 		helpMessage = match(lastLine, /^## (.*)/); \
 		if (helpMessage) { \
@@ -228,7 +228,7 @@ phpmd:
 ## Linter yaml
 yaml-linter:
 	@echo "\nRunning yaml linter...\e[0m"
-	@$(EXEC_SYMFONY) lint:yaml src/ config/ docker*
+	@$(EXEC_SYMFONY) lint:yaml src/ config/ docker* --exclude="config/deploy.yml"
 
 ## Linter xliff
 xliff-linter:
