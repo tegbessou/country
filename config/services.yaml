@@ -7,18 +7,33 @@ services:
         bind:
             $kernelProjectDirectory: '%kernel.project_dir%'
 
-    EmpireDesAmis\Country\:
-        resource: '../src/'
-
     EmpireDesAmis\Country\Application\Projection\CreateCountryProjection:
         tags: [kernel.event_listener]
 
 when@dev:
     services:
+        _defaults:
+            autowire: true
+            autoconfigure: true
+            bind:
+                $kernelProjectDirectory: '%kernel.project_dir%'
+
+        EmpireDesAmis\Country\:
+            resource: '../src/'
+
         EmpireDesAmis\SecurityAuthenticatorBundle\Firebase\Security\Authenticator\AuthenticateUserFromProviderFirebaseInterface:
             alias: EmpireDesAmis\SecurityAuthenticatorBundle\Firebase\Security\Authenticator\AuthenticateUserFromProviderFakeFirebase
 
 when@test:
     services:
+        _defaults:
+            autowire: true
+            autoconfigure: true
+            bind:
+                $kernelProjectDirectory: '%kernel.project_dir%'
+
+        EmpireDesAmis\Country\:
+            resource: '../src/'
+
         EmpireDesAmis\SecurityAuthenticatorBundle\Firebase\Security\Authenticator\AuthenticateUserFromProviderFirebaseInterface:
             alias: EmpireDesAmis\SecurityAuthenticatorBundle\Firebase\Security\Authenticator\AuthenticateUserFromProviderFakeFirebase
