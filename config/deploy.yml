@@ -16,7 +16,7 @@
     host: 5.189.149.68
     app_port: 8082
     healthcheck:
-      path: /api/up_country
+      path: /api/up
 
   registry:
     username: tegbessou
@@ -52,8 +52,8 @@
 
   labels:
     traefik.enable: "true"
-    traefik.http.routers.empire-des-amis-user.rule: "PathPrefix(`/country/api`)"
-    traefik.http.routers.empire-des-amis-user.entrypoints: "web"
-    traefik.http.services.empire-des-amis-user.loadbalancer.server.port: "8082"
-    traefik.http.routers.empire-des-amis-user.middlewares: "strip-prefix"
+    traefik.http.routers.empire-des-amis-country.rule: "PathPrefix(`/country/api`)"
+    traefik.http.routers.empire-des-amis-country.entrypoints: "web"
+    traefik.http.services.empire-des-amis-country.loadbalancer.server.port: "8082"
+    traefik.http.routers.empire-des-amis-country.middlewares: "strip-prefix"
     traefik.http.middlewares.strip-prefix.stripPrefix.prefixes: "/country"
