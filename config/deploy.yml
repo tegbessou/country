@@ -4,6 +4,8 @@
 
   image: tegbessou/empire-des-amis-country
 
+  deploy_timeout: 60
+
   servers:
     web:
       hosts:
